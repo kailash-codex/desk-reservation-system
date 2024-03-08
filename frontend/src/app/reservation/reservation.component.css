@@ -1,0 +1,17 @@
+/* h3, h2 {
+    margin-top: 24px;
+} */
+table {
+    padding: 16px;
+    /* overflow: scroll; */
+    
+}
+
+.mat-tab {
+    overflow: scroll;
+}
+.holder1 {
+    padding: 16px;
+    display: block;
+    /* overflow: scroll; */
+}

@@ -1,0 +1,24 @@
+table {
+    padding: 16px;
+    /* overflow: scroll; */
+
+}
+
+.mat-tab {
+    overflow: scroll;
+}
+
+.holder1 {
+    padding: 16px;
+    display: block;
+    /* overflow: scroll; */
+}
+
+::ng-deep .center-text {
+    text-align: center;
+}
+
+::ng-deep .success-snackbar {
+    background: #1fcd98;
+    white-space: pre-wrap
+}

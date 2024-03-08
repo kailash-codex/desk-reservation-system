@@ -1,0 +1,31 @@
+<h1 mat-dialog-title>Update a Desk</h1>
+<div mat-dialog-content>
+    <ng-container matColumnDef="desk_type">
+        <mat-form-field appearance="fill" style="margin-top: 40px;" style="margin-right: 40px;">
+            <mat-label>Choose Desk Type</mat-label>
+            <mat-select [formControl]="newDeskType" name="i">
+                <mat-option *ngFor="let i of typeoptions" [value]="i.value">
+                    {{i.value}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </ng-container>
+
+    <ng-container matColumnDef="included_resource">
+        <mat-form-field appearance="fill" style="margin-top: 40px;">
+            <mat-label>Choose Included Resource</mat-label>
+            <mat-select [formControl]="newDeskIncludedResource" name="i">
+                <mat-option *ngFor="let i of inc_resource_options" [value]="i.value" [disabled]="isOptionDisabled(i)">
+                    {{i.value}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+    </ng-container>
+</div>
+
+<div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Cancel</button>
+    <button mat-button [disabled]="newDeskType.invalid || newDeskIncludedResource.invalid" (click)="onUpdateClick()"
+        cdkFocusInitial>Confirm</button>
+</div>
